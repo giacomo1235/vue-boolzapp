@@ -115,9 +115,12 @@ button {
 }
 
 .contacts {
-    display: flex;
+    overflow: scroll; 
+    height: calc(100vh - 80px); /* non funziona */
+    
 }
 .contact {
+    padding: 10px 0;
     margin: 5px;
     display: flex;
     font-size: .7rem;

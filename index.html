@@ -35,11 +35,11 @@
                 <input type="text" id="search-input" value="" placeholder="Cerca o inizia una nuova chat">
             </div>
             <div id="contacts">
-                <div class="contact">
-                   <div class="user">
-                        <img src="img/avatar_1.jpg" alt="">
+                <div v-for="contact in arrContacts" class="contact">
+                   <div  class="user">
+                        <img :src="contact.image" :alt="contact.name">
                        <div class="text">
-                            <p class="name">Michele</p>
+                            <p class="name">{{contact.name}}</p>
                             <p class="last-sent">ultimo messaggio inviato</p>
                        </div>
                    </div>
