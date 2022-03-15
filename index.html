@@ -36,8 +36,8 @@
             </div>
             <div id="contacts">
                 <div v-for="contact in arrContacts" class="contact">
-                   <div  class="user">
-                        <img :src="contact.image" :alt="contact.name">
+                    <div  class="user">
+                         <img :src="contact.image" :alt="contact.name">
                        <div class="text">
                             <p class="name">{{contact.name}}</p>
                             <p class="last-sent">ultimo messaggio inviato</p>
@@ -50,8 +50,8 @@
         <div class="main-div">
             <nav class="navbar navbar-right">
                 <div class="user">
-                    <img src="img/avatar_io.jpg" alt="">
-                    <p class="user-name">Giacomo</p>
+                    <img src="img/avatar_1.jpg" alt="">
+                    <p class="user-name">Michele</p>
                 </div>
                 <div class="buttons main-buttons">
                     <button ><i class="fa-solid fa-magnifying-glass"></i></i></button>
@@ -60,12 +60,12 @@
                 </div>
             </nav>
             <div class="messages">
-                <div class="mandati-io"><div class="sent">ciao bello mandato da me</div></div>
+                <div  class="mandati-io"><div v-for="sent in arrSent" class="sent">{{sent}}</div></div>
                 <div class="mandati-loro"><div class="recived">ciao bello ricevuto</div></div>
             </div>
             <div class="write-text">
                 <button class="emojis"><i class="fa-solid fa-face-smile"></i></button>
-                <input type="text" id="search-input" value="" placeholder="Scrivi un messaggio">
+                <input @keyup.enter="addSent" v-model="sent" type="text" id="search-input" value="" placeholder="Scrivi un messaggio">
                 <button class="microphone"><i class="fa-solid fa-microphone"></i></button>
             </div>
         </div>

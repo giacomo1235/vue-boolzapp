@@ -1,6 +1,8 @@
 const app = new Vue ({
-    el:'#contacts',
+    el:'.main',
     data:{
+        sent:'',
+        arrSent:[],
         arrContacts: [
             {
                 name: 'Michele',
@@ -39,6 +41,10 @@ const app = new Vue ({
 
     },
     methods:{
+            addSent() {
+            this.arrSent.push(this.sent);
+            this.sent = '';
+        }
 
     },
 });
