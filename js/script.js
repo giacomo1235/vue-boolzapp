@@ -1,6 +1,7 @@
 const app = new Vue ({
     el:'.main',
     data:{
+        arrRecived:[],
         sent:'',
         arrSent:[],
         arrContacts: [
@@ -44,6 +45,7 @@ const app = new Vue ({
             addSent() {
             this.arrSent.push(this.sent);
             this.sent = '';
+           // setTimeout(this.arrRecived.push('stupido!'),2000)
         }
 
     },
