@@ -6,32 +6,80 @@
 
 .main {
     display: flex;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .sidebar {
+    border: 1px solid rgb(86%, 86%, 86%);
     width: 35%;
     height: 100vh;
-    background-color: gold;
+    background-color: white;
 }
 
 .main-div {
     width: 65%;
     height: 100vh;
-    background-color: goldenrod;
+    background-image: url(../img/mine.jpg);
+    background-size: 270px;
+
 }
 
-.navbar-left {
+.navbar {
     width: 100%;
     height: 40px;
-    background-color: burlywood;
+    background-color: rgb(91%, 91%, 91%);
     display: flex;
+    justify-content: space-between;
+}
+.navbar i {
+    color: rgb(66%, 66%, 66%);
 }
 .user {
+    
     display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: .7rem;
 }
 
 img {
+    margin: 0 5px;
     width: 30px;
     height: 30px;
     border-radius: 50px;
+}
+
+.buttons {
+    flex-grow: .3;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+button{
+    border: none;
+    background-color: transparent;
+}
+
+.recive-alerts{
+    height: 40px;
+    background-color: rgb(50%, 82%, 98%);
+    display: flex;
+    align-items: center;
+    
+}
+.recive-alerts .text {
+    font-size: .5rem;
+}
+
+.mute-logo {
+    color: rgb(50%, 82%, 98%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    border-radius: 40px;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(94%, 98%, 100%);
 }
