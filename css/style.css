@@ -50,7 +50,9 @@ img {
     height: 30px;
     border-radius: 50px;
 }
-
+button {
+    cursor: pointer;
+}
 .buttons {
     flex-grow: .3;
     display: flex;
@@ -101,6 +103,7 @@ img {
     margin: 0;
     padding: 0 10px;
     background-color: white;
+    cursor: pointer;
     /* border-right: 1px solid grey; width: 20%; */
 }
 
@@ -152,15 +155,30 @@ img {
     margin: 0 10px;
 }
 
-.messages {
+/* .messages {
     display: flex;
    
     justify-content: space-around;
     
 }
+ */
+.mandati-io {
+    margin: 5px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.mandati-loro {
+    margin: 5px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+}
 
 .sent,
 .recived {
+    font-size: .7rem;
     width: 300px;
     padding: 10px;
     border: 1px solid lightgray;
@@ -174,5 +192,5 @@ img {
 }
 
 .recived {
-    background-color: green;
+    background-color: rgb(86%, 97%, 75%);
 }
