@@ -144,6 +144,7 @@ button {
 .write-text {
     position:absolute ;
     bottom: 0;
+    right: 0;
     width: 100%;
     display: flex;
     align-items: center;
@@ -170,7 +171,7 @@ button {
     overflow: scroll;
 }
  */
-.clearfix::after {
+/* .clearfix::after {
     content: "";
     clear: both;
     display: table;
@@ -196,4 +197,90 @@ button {
 .messaggi.sent {
     background-color: green;
     float: right;
+}
+ */
+
+.right-messages {
+  height: 100%;
+  width: 100%;
+  padding: 5% 10%;
+  background-image: url('img/mine.jpg');
+  overflow-y: scroll;
+}
+
+
+.right-messages .message {
+  position: relative;
+  margin: 5px 0;
+  padding: 15px 15px 20px 15px;
+  min-width: 40%;
+  max-width: 60%;
+  background: #fff;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.right-messages .message::after {
+  content: '';
+  display: table;
+  overflow: hidden;
+  clear: both;
+}
+
+.right-messages .message:hover .message-options,
+.right-messages .message .message-options.active {
+  display: block;
+}
+
+.right-messages .message .message-options {
+  display: none;
+  color: #B6B9BB;
+  cursor: pointer;
+}
+
+.right-messages .message .message-options-panel {
+  position: absolute;
+  right: 0;
+  bottom: -75px;
+  width: 150px;
+  height: 80px;
+  background: white;
+  box-shadow: 0px 0px 40px -15px rgba(0, 0, 0, 0.75);
+}
+
+.right-messages .message .message-options-panel.active {
+  display: block;
+}
+
+.right-messages .message .message-options-panel>div {
+  cursor: pointer;
+  width: 100%;
+  height: 50%;
+  line-height: 40px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.right-messages .message .message-options-panel>div:hover {
+  color: #B6B9BB;
+}
+
+.right-messages .message .message-time {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  font-size: 10px;
+  color: #B6B9BB;
+}
+
+.right-messages .message.received {
+  background: white;
+  float: left;
+  clear: both;
+}
+
+.right-messages .message.sent {
+  background: #D5F9BA;
+  float: right;
+  clear: both;
 }

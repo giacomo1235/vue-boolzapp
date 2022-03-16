@@ -47,6 +47,11 @@ const app = new Vue ({
                         sent: true,
                         date: '10/40/2022'
                     },
+                    {
+                        text: 'ciao capo',
+                        sent: true,
+                        date: '10/40/2022'
+                    },
 
                 ]
             },
