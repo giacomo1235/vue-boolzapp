@@ -23,7 +23,7 @@
     height: 100vh;
     background-image: url(../img/mine.jpg);
     background-size: 270px;
-    position: relative;
+    overflow: auto;
 
 }
 
@@ -142,10 +142,10 @@ button {
     flex-grow: .1;
 }
 .write-text {
-    position:absolute ;
+    position: fixed;
     bottom: 0;
     right: 0;
-    width: 100%;
+    width: 65%;
     display: flex;
     align-items: center;
     background-color: rgb(95%, 93%, 92%);
@@ -165,40 +165,6 @@ button {
     border: none;
     margin: 0 10px;
 }
-
-/* .messages {
-    height: 500px;
-    overflow: scroll;
-}
- */
-/* .clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-
-.messaggi {
-    margin: 10px;
-    padding: 5px 10px;
-    min-width: 150px;
-    max-width: 490px;
-    border: 1px solid grey;
-    border-radius: 5px;
-    display: block;
-    
-
-}
-
-.messaggi.recived {
-    background-color: antiquewhite;
-    float: left;
-}
-
-.messaggi.sent {
-    background-color: green;
-    float: right;
-}
- */
 
 .right-messages {
   height: 100%;

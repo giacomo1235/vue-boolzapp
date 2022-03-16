@@ -1,9 +1,10 @@
 const app = new Vue ({
     el:'.main',
     data:{
+        i:0,
         activeIndex: 0,
        // arrRecived:[],
-        sent:{},
+        sent1:'',
         arrContacts: [
             {
                 name: 'Michele',
@@ -83,11 +84,19 @@ const app = new Vue ({
 
     },
     methods:{
-            addSent() {
-             this.messages.push({text:'',sent:true});
-            this.sent = '';
-           // setTimeout(this.arrRecived.push('stupido!'),2000)
-        }
+            addSent(i) {
+                const automessage = this.automessage
+                const sent1 = this.sent1
+             this.arrContacts[i].messages.push({text:sent1 ,sent:true});
+            this.sent1= '';
+            
+            setTimeout(automessage,3000)
+            },
+            automessage() {
+                
+                this.arrContacts[i].messages.push({text:'ok!', sent:false});
+                   }
+            
 
     },
 });

@@ -59,10 +59,7 @@
                     <button class="dots"><i class="fa-solid fa-ellipsis-vertical"></i></button>
                 </div>
             </nav>
-           <!--  <div class="messages clearfix">
-                <div v-for="sent in arrSent" class="messaggi sent">{{sent}}</div>
-                <div v-for="messaggi in arrContacts[activeIndex].messages" class="messaggi recived">{{arrContacts[activeIndex].messages.text}}</div>
-            </div> -->
+           
             <div class="right-messages-container">
                 <div class="right-messages">
                   <div class='message sent' v-if="messaggi.sent"  v-for="messaggi in arrContacts[activeIndex].messages"> 
@@ -88,7 +85,7 @@
               </div>
             <div class="write-text">
                 <button class="emojis"><i class="fa-solid fa-face-smile"></i></button>
-                <input @keyup.enter="addSent" v-model="sent" type="text" id="search-input" value="" placeholder="Scrivi un messaggio">
+                <input @keyup.enter="addSent(activeIndex)" v-model="sent1" type="text" id="search-input" value="" placeholder="Scrivi un messaggio">
                 <button class="microphone"><i class="fa-solid fa-microphone"></i></button>
             </div>
         </div>
