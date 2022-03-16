@@ -92,7 +92,7 @@ const app = new Vue ({
             
             setTimeout(automessage,3000)
             },
-            automessage() {
+            automessage(i) {
                 
                 this.arrContacts[i].messages.push({text:'ok!', sent:false});
                    }
