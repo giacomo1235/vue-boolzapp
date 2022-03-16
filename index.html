@@ -61,7 +61,7 @@
             </nav>
             <div class="messages clearfix">
                 <div v-for="sent in arrSent" class="messaggi sent">{{sent}}</div>
-                <div class="messaggi recived">locicici</div>
+                <div v-for="messaggi in arrContacts.messages" class="messaggi recived">{{arrContacts[activeIndex].messages.text}}</div>
             </div>
             <div class="write-text">
                 <button class="emojis"><i class="fa-solid fa-face-smile"></i></button>

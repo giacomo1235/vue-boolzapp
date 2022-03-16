@@ -9,10 +9,46 @@ const app = new Vue ({
             {
                 name: 'Michele',
                 image:'img/avatar_1.jpg',
+                messages: [
+                    {
+                        text: 'ciao doc',
+                        sent: true,
+                        date: '10/20/2022'
+                    },
+                    {
+                        text: 'ciao maestro',
+                        sent: false,
+                        date: '10/11/2022'
+                    },
+                    {
+                        text: 'ciao capo',
+                        sent: true,
+                        date: '10/40/2022'
+                    },
+
+                ]
             },
             {
                 name: 'Fabio',
                 image:'img/avatar_2.jpg',
+                messages: [
+                    {
+                        text: 'ciao bella',
+                        sent: false,
+                        date: '10/20/2022'
+                    },
+                    {
+                        text: 'ciao mitico',
+                        sent: true,
+                        date: '10/11/2022'
+                    },
+                    {
+                        text: 'ciao bellezza',
+                        sent: true,
+                        date: '10/40/2022'
+                    },
+
+                ]
             },
             {
                 name: 'Samuele',
