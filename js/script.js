@@ -3,8 +3,7 @@ const app = new Vue ({
     data:{
         activeIndex: 0,
        // arrRecived:[],
-        sent:'',
-        arrSent:[],
+        sent:{},
         arrContacts: [
             {
                 name: 'Michele',
@@ -85,7 +84,7 @@ const app = new Vue ({
     },
     methods:{
             addSent() {
-            this.arrSent.push(this.sent);
+             this.messages.push({text:'',sent:true});
             this.sent = '';
            // setTimeout(this.arrRecived.push('stupido!'),2000)
         }
