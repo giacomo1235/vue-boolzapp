@@ -1,7 +1,8 @@
 const app = new Vue ({
     el:'.main',
     data:{
-        arrRecived:[],
+        activeIndex: 0,
+       // arrRecived:[],
         sent:'',
         arrSent:[],
         arrContacts: [

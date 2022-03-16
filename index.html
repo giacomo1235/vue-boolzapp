@@ -35,7 +35,7 @@
                 <input type="text" id="search-input" value="" placeholder="Cerca o inizia una nuova chat">
             </div>
             <div id="contacts">
-                <div v-for="contact in arrContacts" class="contact">
+                <div v-for="(contact, index) in arrContacts" :key="contact.name" @click="activeIndex = index" class="contact">
                     <div  class="user">
                          <img :src="contact.image" :alt="contact.name">
                        <div class="text">
@@ -50,8 +50,8 @@
         <div class="main-div">
             <nav class="navbar navbar-right">
                 <div class="user">
-                    <img src="img/avatar_1.jpg" alt="">
-                    <p class="user-name">Michele</p>
+                    <img :src="arrContacts[activeIndex].image" alt="">
+                    <p class="user-name">{{arrContacts[activeIndex].name}}</p>
                 </div>
                 <div class="buttons main-buttons">
                     <button ><i class="fa-solid fa-magnifying-glass"></i></i></button>
@@ -59,9 +59,9 @@
                     <button class="dots"><i class="fa-solid fa-ellipsis-vertical"></i></button>
                 </div>
             </nav>
-            <div class="messages">
-                <div v-for="sent in arrSent"  class="mandati-io"><div  class="sent">{{sent}}</div></div>
-                <div v-for="sent in arrSent" class="mandati-loro"><div class="recived">Ciao bello</div></div>
+            <div class="messages clearfix">
+                <div v-for="sent in arrSent" class="messaggi sent">{{sent}}</div>
+                <div class="messaggi recived">locicici</div>
             </div>
             <div class="write-text">
                 <button class="emojis"><i class="fa-solid fa-face-smile"></i></button>
