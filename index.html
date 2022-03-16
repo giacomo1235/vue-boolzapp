@@ -65,8 +65,8 @@
             </div> -->
             <div class="right-messages-container">
                 <div class="right-messages">
-                  <div class='message sent' v-if="arrContacts[activeIndex].messages.sent" v-for="messaggi in arrContacts[activeIndex].messages">
-                    <span class="message-text">{{arrContacts[activeIndex].messages.text}}</span>
+                  <div class='message sent' v-if="messaggi.sent"  v-for="messaggi in arrContacts[activeIndex].messages"> 
+                    <span class="message-text">{{messaggi.text}}</span>
                     <span class="message-time">20/03/2020 16:30:00</span>
                     <i class="fa fa-chevron-down f-right message-options"></i>
                     <div class="message-options-panel" style="display: none;">
@@ -75,8 +75,8 @@
                     </div>
                   </div>
         
-                     <div class='message received' v-if="arrContacts[activeIndex].messages.sent == false" v-for="messaggi in arrContacts[activeIndex].messages">
-                    <span class="message-text">{{arrContacts[activeIndex].messages.text}}</span>
+                     <div class='message received' v-if="messaggi.sent == false"  v-for="messaggi in arrContacts[activeIndex].messages"> <!--  -->
+                    <span class="message-text">{{messaggi.text}}</span>
                     <span class="message-time">20/03/2020 16:30:55</span>
                     <i class="fa fa-chevron-down f-right message-options"></i>
                     <div class="message-options-panel" style="display: none;">
