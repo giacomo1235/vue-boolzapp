@@ -13,6 +13,7 @@ const app = new Vue({
                 name: 'Michele',
                 image: 'img/avatar_1.jpg',
                 visible: true,
+                newMessageContent: '',
                 messages: [
                     {
                         text: 'ciao doc',
@@ -36,6 +37,7 @@ const app = new Vue({
                 name: 'Fabio',
                 image: 'img/avatar_2.jpg',
                 visible: true,
+                newMessageContent: '',
                 messages: [
                     {
                         text: 'ciao bella',
@@ -64,6 +66,7 @@ const app = new Vue({
                 name: 'Samuele',
                 image: 'img/avatar_3.jpg',
                 visible: true,
+                newMessageContent: '',
                 messages: [
                     {
                         text: 'ciao capo',
@@ -81,6 +84,7 @@ const app = new Vue({
                 name: 'Alessandro B.',
                 image: 'img/avatar_4.jpg',
                 visible: true,
+                newMessageContent: '',
                 messages: [
                     {
                         text: 'ciao capo',
@@ -98,6 +102,7 @@ const app = new Vue({
                 name: 'Alessandro L.',
                 image: 'img/avatar_5.jpg',
                 visible: true,
+                newMessageContent: '',
                 messages: [
                     {
                         text: 'ciao capo',
@@ -115,6 +120,7 @@ const app = new Vue({
                 name: 'Claudia',
                 image: 'img/avatar_6.jpg',
                 visible: true,
+                newMessageContent: '',
                 messages: [
                     {
                         text: 'ciao capo',
@@ -132,6 +138,7 @@ const app = new Vue({
                 name: 'Federico',
                 image: 'img/avatar_7.jpg',
                 visible: true,
+                newMessageContent: '',
                 messages: [
                     {
                         text: 'ciao capo',
@@ -149,6 +156,7 @@ const app = new Vue({
                 name: 'Davide',
                 image: 'img/avatar_8.jpg',
                 visible: true,
+                newMessageContent: '',
                 messages: [
                     {
                         text: 'ciao capo',
@@ -168,9 +176,14 @@ const app = new Vue({
     },
     methods: {
        addSent () {
-            const sent1 = {...this.sent1};
-            this.autoMessage(sent1);
-            this.sent1.text = "";
+           const activeChat = this.arrContacts[this.activeIndex]
+           const newMessage = {
+               text:activeChat.newMessageContent,
+               sent: true,
+               date: '10/20/2022'
+            };
+            activeChat.messages.push(newMessage);
+            activeChat.newMessageContent = '';
             setTimeout(this.postReply,1000)
         },
             
