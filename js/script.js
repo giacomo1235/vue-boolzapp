@@ -200,7 +200,8 @@ const app = new Vue({
            const newMessage = {
                text:activeChat.newMessageContent,
                sent: true,
-               date: '10/20/2022'
+               date: '10/20/2022',
+               show: false
             };
             activeChat.messages.push(newMessage);
             activeChat.newMessageContent = '';
@@ -219,9 +220,9 @@ const app = new Vue({
                 show: false,}
             )
         },
-        dontShow (activeIndex) {
+        dontShow () {
             this.arrContacts[this.activeIndex].messages.show = !this.arrContacts[this.activeIndex].messages.show;
-            
+            console.log(this.arrContacts[this.activeIndex].messages.show)
         },
         getFormattedDate (date, format) {
             let formatStr= '';

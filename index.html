@@ -57,7 +57,7 @@
                     <p class="user-name">{{arrContacts[activeIndex].name}}</p>
                 </div>
                 <div class="buttons main-buttons">
-                    <button><i class="fa-solid fa-magnifying-glass"></i></i></button>
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
                     <button><i class="fa-solid fa-paperclip"></i></button>
                     <button class="dots"><i class="fa-solid fa-ellipsis-vertical"></i></button>
                 </div>
@@ -69,8 +69,8 @@
                         v-for="messaggi in arrContacts[activeIndex].messages">
                         <span class="message-text">{{messaggi.text}}</span>
                         <span class="message-time"></span> <!-- {{getFormattedDate(messaggi.date, 'italian')}} -->
-                        <i class="fa fa-chevron-down f-right message-options" @click="dontShow(activeIndex)"></i> <!--  -->
-                        <div class="message-options-panel" v-show="show"  > 
+                        <i class="fa fa-chevron-down f-right message-options" @click="dontShow()"></i> <!--  -->
+                        <div class="message-options-panel" v-show="messaggi.show"  > 
                             <div class="message-info">Info messaggio</div>
                             <div class="message-destroy">Cancella messaggio</div>
                         </div>
