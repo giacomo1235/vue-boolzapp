@@ -2,12 +2,12 @@ const app = new Vue({
     el: '.main',
     data: {
         searchString: '',
-        show: false,
         activeIndex: 0,
         sent1:{
             text: '',
             sent: true,
-            date: '10/20/2022'
+            date: '10/20/2022',
+            show: false
         } ,
         arrContacts: [
             {
@@ -19,17 +19,20 @@ const app = new Vue({
                     {
                         text: 'ciao doc',
                         sent: true,
-                        date: '2020-01-10T15:30:55'
+                        date: '2020-01-10T15:30:55',
+                        show: false,
                     },
                     {
                         text: 'ciao maestro',
                         sent: false,
-                        date: '2020-01-10T15:30:55'
+                        date: '2020-01-10T15:30:55',
+                        show: false,
                     },
                     {
                         text: 'ciao capo',
                         sent: true,
-                        date: '2020-01-10T15:30:55'
+                        date: '2020-01-10T15:30:55',
+                        show: false,
                     },
 
                 ]
@@ -43,22 +46,26 @@ const app = new Vue({
                     {
                         text: 'ciao bella',
                         sent: false,
-                        date: '2020-01-10T15:30:55'
+                        date: '2020-01-10T15:30:55',
+                        show: false,
                     },
                     {
                         text: 'ciao mitico',
                         sent: true,
-                        date: '2020-01-10T15:30:55'
+                        date: '2020-01-10T15:30:55',
+                        show: false,
                     },
                     {
                         text: 'ciao bellezza',
                         sent: true,
-                        date: '2020-01-10T15:30:55'
+                        date: '2020-01-10T15:30:55',
+                        show: false,
                     },
                     {
                         text: 'ciao capo',
                         sent: true,
-                        date: '2020-01-10T15:30:55'
+                        date: '2020-01-10T15:30:55',
+                        show: false,
                     },
 
                 ]
@@ -72,12 +79,14 @@ const app = new Vue({
                     {
                         text: 'ciao capo',
                         sent: true,
-                        date: '2020-01-10T15:30:55'
+                        date: '2020-01-10T15:30:55',
+                        show: false,
                     },
                     {
                         text: 'ciao doc',
                         sent: true,
-                        date: '2020-01-10T15:30:55'
+                        date: '2020-01-10T15:30:55',
+                        show: false,
                     },
                 ]
             },
@@ -90,12 +99,14 @@ const app = new Vue({
                     {
                         text: 'ciao capo',
                         sent: true,
-                        date: '2020-01-10T15:30:55'
+                        date: '2020-01-10T15:30:55',
+                        show: false,
                     },
                     {
                         text: 'ciao doc',
                         sent: true,
-                        date: '2020-01-10T15:30:55'
+                        date: '2020-01-10T15:30:55',
+                        show: false,
                     },
                 ]
             },
@@ -108,12 +119,14 @@ const app = new Vue({
                     {
                         text: 'ciao capo',
                         sent: true,
-                        date: '2020-01-10T15:30:55'
+                        date: '2020-01-10T15:30:55',
+                        show: false,
                     },
                     {
                         text: 'ciao doc',
                         sent: true,
-                        date: '2020-01-10T15:30:55'
+                        date: '2020-01-10T15:30:55',
+                        show: false,
                     },
                 ]
             },
@@ -126,12 +139,14 @@ const app = new Vue({
                     {
                         text: 'ciao capo',
                         sent: true,
-                        date: '2020-01-10T15:30:55'
+                        date: '2020-01-10T15:30:55',
+                        show: false,
                     },
                     {
                         text: 'ciao doc',
                         sent: true,
-                        date: '2020-01-10T15:30:55'
+                        date: '2020-01-10T15:30:55',
+                        show: false,
                     },
                 ]
             },
@@ -144,12 +159,14 @@ const app = new Vue({
                     {
                         text: 'ciao capo',
                         sent: true,
-                        date: '2020-01-10T15:30:55'
+                        date: '2020-01-10T15:30:55',
+                        show: false,
                     },
                     {
                         text: 'ciao doc',
                         sent: true,
-                        date: '2020-01-10T15:30:55'
+                        date: '2020-01-10T15:30:55',
+                        show: false,
                     },
                 ]
             },
@@ -162,12 +179,14 @@ const app = new Vue({
                     {
                         text: 'ciao capo',
                         sent: true,
-                        date: '2020-01-10T15:30:55'
+                        date: '2020-01-10T15:30:55',
+                        show: false,
                     },
                     {
                         text: 'ciao doc',
                         sent: true,
-                        date: '2020-01-10T15:30:55'
+                        date: '2020-01-10T15:30:55',
+                        show: false,
                     },
                 ]
             },
@@ -196,12 +215,13 @@ const app = new Vue({
             this.autoMessage(
                 {text:'OK!',
                 sent: false,
-                date: '10/20/2022'}
+                date: '10/20/2022',
+                show: false,}
             )
         },
         dontShow (activeIndex) {
-            const show = false;
-           this.show = !this.show
+            this.arrContacts[this.activeIndex].messages.show = !this.arrContacts[this.activeIndex].messages.show;
+            
         },
         getFormattedDate (date, format) {
             let formatStr= '';
