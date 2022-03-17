@@ -244,7 +244,7 @@ const app = new Vue({
                     break;    
             }
 
-           return luxon.dateTime.fromISO(date).toFormat(formatStr)
+           return luxon.DateTime.fromISO(date).toFormat(formatStr)
         } ,
         searchChat () {
             this.arrContacts.forEach(chat => {
