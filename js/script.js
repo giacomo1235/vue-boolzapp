@@ -1,6 +1,7 @@
 const app = new Vue({
     el: '.main',
     data: {
+        searchString: '',
         show: false,
         activeIndex: 0,
         sent1:{
@@ -199,9 +200,8 @@ const app = new Vue({
             )
         },
         dontShow () {
-            const show = this.show
-            show = !show
-            console.log(show)
+            const show = false;
+           this.show = !this.show
         },
         getFormattedDate (date, format) {
             let formatStr= '';
@@ -215,6 +215,17 @@ const app = new Vue({
             }
 
            return luxon.dateTime.fromISO(date).toFormat(formatStr)
-        } 
+        } ,
+        searchChat () {
+            this.arrContacts.forEach(chat => {
+                if (chat.name.includes(this.searchString)) {
+                    chat.visible = true;
+                } else {
+                    chat.visible = false;
+
+                }
+                
+            })
+        }
     },
 });
