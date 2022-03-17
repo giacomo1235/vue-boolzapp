@@ -248,7 +248,8 @@ const app = new Vue({
         } ,
         searchChat () {
             this.arrContacts.forEach(chat => {
-                if (chat.name.includes(this.searchString)) {
+                
+                if (chat.name.toLowerCase().includes(this.searchString.toLowerCase())) {
                     chat.visible = true;
                 } else {
                     chat.visible = false;
@@ -258,4 +259,4 @@ const app = new Vue({
             })
         }
     },
-});
+});/*  */
