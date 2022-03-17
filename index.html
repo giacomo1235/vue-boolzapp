@@ -79,7 +79,7 @@
             </div>
             <div class="write-text">
                 <button class="emojis"><i class="fa-solid fa-face-smile"></i></button>
-                <input @keyup.enter="addSent" v-model="sent1.text" type="text" id="search-input" value=""
+                <input @keyup.enter="addSent" v-model="arrContacts[activeIndex].newMessageContent" type="text" id="search-input" value=""
                     placeholder="Scrivi un messaggio">
                 <button class="microphone"><i class="fa-solid fa-microphone"></i></button>
             </div>
