@@ -7,7 +7,7 @@ const app = new Vue({
         sent1:{
             text: '',
             sent: true,
-            date: '10/20/2022',
+            date: '2023-12-10T15:50:55',
             show: false
         } ,
         arrContacts: [
@@ -20,22 +20,21 @@ const app = new Vue({
                     {
                         text: 'ciao doc',
                         sent: true,
-                        date: '2020-01-10T15:30:55',
+                        date: '2023-12-10T15:50:55',
                         show: false,
                     },
                     {
                         text: 'ciao maestro',
                         sent: false,
-                        date: '2020-01-10T15:30:55',
+                        date: '2021-11-11T13:30:55',
                         show: false,
                     },
                     {
                         text: 'ciao capo',
                         sent: true,
-                        date: '2020-01-10T15:30:55',
+                        date: '2025-09-10T16:30:55',
                         show: false,
                     },
-
                 ]
             },
             {
@@ -202,7 +201,7 @@ const app = new Vue({
            const newMessage = {
                text:activeChat.newMessageContent,
                sent: true,
-               date: '10/20/2022',
+               date: '2023-12-10T15:50:55',
                show: false
             };
             activeChat.messages.push(newMessage);
@@ -221,7 +220,7 @@ const app = new Vue({
             this.autoMessage(
                 {text:'OK!',
                 sent: false,
-                date: '10/20/2022',
+                date: '2023-12-10T15:50:55',
                 show: false,}
             )
         },
@@ -257,6 +256,7 @@ const app = new Vue({
                 }
                 
             })
-        }
+        },
+       
     },
 });/*  */

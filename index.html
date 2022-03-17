@@ -40,12 +40,11 @@
             <div id="contacts">
                 <div v-for="(contact, index) in arrContacts" :key="contact.name" @click="activeIndex = index"
                     class="contact" v-if="contact.visible">
-                    <!--  -->
                     <div class="user">
                         <img :src="contact.image" :alt="contact.name">
                         <div class="text">
                             <p class="name">{{contact.name}}</p>
-                            <p class="last-sent">ultimo messaggio inviato</p>
+                            <p class="last-sent">{{contact.messages.slice(-1)}}</p>
                         </div>
                     </div>
                     <div class="last-time">12:00</div>
