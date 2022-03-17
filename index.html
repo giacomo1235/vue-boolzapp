@@ -68,9 +68,9 @@
                     <div class="message" :class='{sent: messaggi.sent, received: !messaggi.sent}'
                         v-for="messaggi in arrContacts[activeIndex].messages">
                         <span class="message-text">{{messaggi.text}}</span>
-                        <span class="message-time">20/03/2020 16:30:00</span>
-                        <i class="fa fa-chevron-down f-right message-options"></i>
-                        <div class="message-options-panel" style="display: none;">
+                        <span class="message-time"></span> <!-- {{getFormattedDate(messaggi.date, 'italian')}} -->
+                        <i class="fa fa-chevron-down f-right message-options" ></i> <!-- @click="dontShow" -->
+                        <div class="message-options-panel" style="display: none" > <!-- :style=" show? display: none : display: block" -->
                             <div class="message-info">Info messaggio</div>
                             <div class="message-destroy">Cancella messaggio</div>
                         </div>
@@ -87,6 +87,7 @@
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@2.3.1/build/global/luxon.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 
