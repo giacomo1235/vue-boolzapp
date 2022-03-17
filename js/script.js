@@ -1,6 +1,7 @@
 const app = new Vue({
     el: '.main',
     data: {
+        indexMessaggio: 0,
         searchString: '',
         activeIndex: 0,
         sent1:{
@@ -220,9 +221,10 @@ const app = new Vue({
                 show: false,}
             )
         },
-        dontShow () {
-            this.arrContacts[this.activeIndex].messages.show = !this.arrContacts[this.activeIndex].messages.show;
-            console.log(this.arrContacts[this.activeIndex].messages.show)
+        dontShow (indexMessaggio) {
+            this.arrContacts[this.activeIndex].messages[indexMessaggio].show = !this.arrContacts[this.activeIndex].messages[indexMessaggio].show;
+            console.log(this.arrContacts[this.activeIndex].messages[indexMessaggio].show)
+
         },
         getFormattedDate (date, format) {
             let formatStr= '';
