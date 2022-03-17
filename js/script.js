@@ -199,7 +199,7 @@ const app = new Vue({
                 date: '10/20/2022'}
             )
         },
-        dontShow () {
+        dontShow (activeIndex) {
             const show = false;
            this.show = !this.show
         },

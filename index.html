@@ -69,7 +69,7 @@
                         v-for="messaggi in arrContacts[activeIndex].messages">
                         <span class="message-text">{{messaggi.text}}</span>
                         <span class="message-time"></span> <!-- {{getFormattedDate(messaggi.date, 'italian')}} -->
-                        <i class="fa fa-chevron-down f-right message-options" @click="dontShow"></i> <!--  -->
+                        <i class="fa fa-chevron-down f-right message-options" @click="dontShow(activeIndex)"></i> <!--  -->
                         <div class="message-options-panel" v-show="show"  > 
                             <div class="message-info">Info messaggio</div>
                             <div class="message-destroy">Cancella messaggio</div>
