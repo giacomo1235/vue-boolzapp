@@ -226,6 +226,9 @@ const app = new Vue({
             console.log(this.arrContacts[this.activeIndex].messages[indexMessaggio].show)
 
         },
+        deleteMessage(indexMessaggio) {
+            this.arrContacts[this.activeIndex].messages.splice(indexMessaggio, 1)
+        },
         getFormattedDate (date, format) {
             let formatStr= '';
             switch (format) {
