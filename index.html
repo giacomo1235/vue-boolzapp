@@ -34,11 +34,13 @@
             </div>
             <div class="search">
                 <button><i class="fa-solid fa-magnifying-glass"></i></button>
-                <input type="text" id="search-input" v-model="searchString" value="" placeholder="Cerca o inizia una nuova chat" @keyup="searchChat"> 
+                <input type="text" id="search-input" v-model="searchString" value=""
+                    placeholder="Cerca o inizia una nuova chat" @keyup="searchChat">
             </div>
             <div id="contacts">
                 <div v-for="(contact, index) in arrContacts" :key="contact.name" @click="activeIndex = index"
-                    class="contact" v-if="contact.visible"> <!--  -->
+                    class="contact" v-if="contact.visible">
+                    <!--  -->
                     <div class="user">
                         <img :src="contact.image" :alt="contact.name">
                         <div class="text">
@@ -66,11 +68,11 @@
             <div class="right-messages-container">
                 <div class="right-messages">
                     <div class="message" :class='{sent: messaggi.sent, received: !messaggi.sent}'
-                        v-for="messaggi in arrContacts[activeIndex].messages">
+                        v-for="(messaggi, indexMessaggio) in arrContacts[activeIndex].messages">
                         <span class="message-text">{{messaggi.text}}</span>
                         <span class="message-time"></span> <!-- {{getFormattedDate(messaggi.date, 'italian')}} -->
-                        <i class="fa fa-chevron-down f-right message-options" @click="dontShow()"></i> <!--  -->
-                        <div class="message-options-panel" v-show="messaggi.show"  > 
+                        <i class="fa fa-chevron-down f-right message-options" @click="dontShow(indexMessaggio)"></i>
+                        <div class="message-options-panel" v-show="messaggi.show" style="z-index: 1000"> 
                             <div class="message-info">Info messaggio</div>
                             <div class="message-destroy">Cancella messaggio</div>
                         </div>
@@ -79,8 +81,8 @@
             </div>
             <div class="write-text">
                 <button class="emojis"><i class="fa-solid fa-face-smile"></i></button>
-                <input @keyup.enter="addSent" v-model="arrContacts[activeIndex].newMessageContent" type="text" id="search-input" value=""
-                    placeholder="Scrivi un messaggio">
+                <input @keyup.enter="addSent" v-model="arrContacts[activeIndex].newMessageContent" type="text"
+                    id="search-input" value="" placeholder="Scrivi un messaggio">
                 <button class="microphone"><i class="fa-solid fa-microphone"></i></button>
             </div>
         </div>
