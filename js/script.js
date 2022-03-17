@@ -197,7 +197,8 @@ const app = new Vue({
     },
     methods: {
        addSent () {
-           const activeChat = this.arrContacts[this.activeIndex]
+           if (this.arrContacts[this.activeIndex].newMessageContent != ''){
+               const activeChat = this.arrContacts[this.activeIndex]
            const newMessage = {
                text:activeChat.newMessageContent,
                sent: true,
@@ -207,6 +208,9 @@ const app = new Vue({
             activeChat.messages.push(newMessage);
             activeChat.newMessageContent = '';
             setTimeout(this.postReply,1000)
+            } else {
+                alert('scrivi qualcosa prima di premere!')
+            }
         },
             
         autoMessage(mex) {
@@ -227,7 +231,7 @@ const app = new Vue({
 
         },
         deleteMessage(indexMessaggio) {
-            this.arrContacts[this.activeIndex].messages.splice(indexMessaggio, 1)
+            this.arrContacts[this.activeIndex].messages.splice(indexMessaggio,1)
         },
         getFormattedDate (date, format) {
             let formatStr= '';
