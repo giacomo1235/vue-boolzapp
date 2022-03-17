@@ -160,7 +160,8 @@ button {
     padding: 0 10px;
 }
 
-.write-text button {
+.write-text .microphone,
+.write-text .emojis {
     background-color: transparent;
     border: none;
     margin: 0 10px;
@@ -249,4 +250,16 @@ button {
   background: #D5F9BA;
   float: right;
   clear: both;
+}
+
+.paper-plane {
+    color: white;
+    border: none;
+    background-color: rgb(58%, 81%, 96%);
+    border-radius: 50px;
+    margin: 5px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    padding-right: 8px;
+    padding-top: 7px
 }

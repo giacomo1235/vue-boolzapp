@@ -83,7 +83,8 @@
                 <button class="emojis"><i class="fa-solid fa-face-smile"></i></button>
                 <input @keyup.enter="addSent" v-model="arrContacts[activeIndex].newMessageContent" type="text"
                     id="search-input" value="" placeholder="Scrivi un messaggio">
-                <button class="microphone"><i class="fa-solid fa-microphone"></i></button>
+                <button class="microphone" v-if="this.arrContacts[this.activeIndex].newMessageContent == ''"><i class="fa-solid fa-microphone"></i></button>
+                <button @click="addSent" class="paper-plane" v-if="this.arrContacts[this.activeIndex].newMessageContent != ''"><i class="fa-solid fa-paper-plane"></i></button>
             </div>
         </div>
     </section>
