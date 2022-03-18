@@ -1,6 +1,7 @@
 const app = new Vue({
     el: '.main',
     data: {
+        /* responses: ['ciao','hola','buenos dias',] */
         indexMessaggio: 0,
         searchString: '',
         activeIndex: 0,
@@ -217,8 +218,9 @@ const app = new Vue({
             
         },
         postReply() {
+            const responses= ['ciao','hola','buenos dias',]
             this.autoMessage(
-                {text:'OK!',
+                {text: responses[Math.floor(Math.random()*responses.length)],
                 sent: false,
                 date: '2023-12-10T15:50:55',
                 show: false,}
