@@ -227,7 +227,6 @@ const app = new Vue({
         },
         dontShow (indexMessaggio) {
             this.arrContacts[this.activeIndex].messages[indexMessaggio].show = !this.arrContacts[this.activeIndex].messages[indexMessaggio].show;
-            console.log(this.arrContacts[this.activeIndex].messages[indexMessaggio].show)
 
         },
         deleteMessage(indexMessaggio) {
@@ -260,4 +259,4 @@ const app = new Vue({
         },
        
     },
-});/*  */
+});
