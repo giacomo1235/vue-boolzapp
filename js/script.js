@@ -1,7 +1,6 @@
 const app = new Vue({
     el: '.main',
     data: {
-        /* responses: ['ciao','hola','buenos dias',] */
         indexMessaggio: 0,
         searchString: '',
         activeIndex: 0,
@@ -218,7 +217,7 @@ const app = new Vue({
             
         },
         postReply() {
-            const responses= ['ciao','hola','buenos dias',]
+            const responses= ['ciao','hola','buenos dias','non saprei']
             this.autoMessage(
                 {text: responses[Math.floor(Math.random()*responses.length)],
                 sent: false,

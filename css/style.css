@@ -163,11 +163,15 @@ button {
     margin: 0 10px;
 }
 
+.right-messages-container {
+    height: calc(100vh - 80px);
+    overflow: auto;
+  }
+
 .right-messages {
   height: 100%;
   width: 100%;
   padding: 5% 10%;
-  background-image: url('img/mine.jpg');
   margin-bottom: 60px;
 }
 
