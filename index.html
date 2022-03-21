@@ -44,7 +44,7 @@
                         <img :src="contact.image" :alt="contact.name">
                         <div class="text">
                             <p class="name">{{contact.name}}</p>
-                            <p class="last-sent">{{contact.messages.slice(-1)}}</p>
+                            <p class="last-sent">{{contact.messages[contact.messages.length - 1].text}}</p>
                         </div>
                     </div>
                     <div class="last-time">12:00</div>
